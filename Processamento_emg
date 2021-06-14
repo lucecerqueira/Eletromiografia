@@ -1,0 +1,22 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Jun 14 15:39:01 2021
+
+@author: centos7
+"""
+
+import scipy as sp
+from scipy import signal
+import scipy.io
+from scipy.signal import butter, filtfilt
+import numpy as np
+import pandas as pd
+from pylab import *
+import matplotlib.pyplot as plt
+filename = '/home/centos7/PEB/PosDoc2020/physionet.org/files/ludb/1.0.1/sinal_exemplo.mat'
+data = sp.io.loadmat(filename)
+
+#%%
+dados=pd.DataFrame(data['godoyteste'][:,2])
+dados.to_csv('exemplo_emg.csv')

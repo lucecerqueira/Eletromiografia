@@ -1,0 +1,16 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Jun 14 15:58:32 2021
+
+@author: centos7
+"""
+
+from pandas import read_csv
+from matplotlib import pyplot
+import pandas as pd
+# load dataset
+import matplotlib.pyplot as plt
+sinal_emg = read_csv('exemplo_emg.csv', header=0, index_col=0)
+
+plt.plot(sinal_emg)
